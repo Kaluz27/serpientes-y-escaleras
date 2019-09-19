@@ -12,11 +12,9 @@ class Main {
             
             console.log(jugador2._turno());
             
-            if(jugador1._posicion == jugador2._posicion){
-                console.log("Hubo un empate");
-            }else if(jugador1._posicion > jugador2._posicion){
+            if(jugador1._posicion > jugador2._posicion){
                 console.log(`Gano el jugador: ${jugador1.nombre}, ¡felicidades!.`);
-            }else if(jugador2._posicion > jugador1._posicion ){
+            }else{
                 console.log(`Gano el jugador: ${jugador2.nombre}, ¡felicidades!. `);
             }
                         

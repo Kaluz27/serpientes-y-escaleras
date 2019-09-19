@@ -1,15 +1,14 @@
-/*import Jugador from "./jugador";
-
-export default class Tablero {
-    constructor(casilla = 0) {
-        //this._casilla = casilla;
-        //this._pocision = new Jugador();
-
+/*export default class Tablero {
+    constructor(casilla = [100]) {
+        this._casilla = casilla;
     }
     get casilla() {
         return this._casilla;
     }
-      _escalera() {
+      
+}
+
+_escalera() {
         let escaleraUno = 11;
         let escaleraDos = 27;
         let escaleraTres = 51;
@@ -32,9 +31,9 @@ export default class Tablero {
                 this._pocision++
                 break;
         }
-    }*/
+    }
 
-    /*_serpientes() {
+   _serpientes() {
         let serpienteUno = 20;
         let serpienteDos = 35;
         let serpienteTres = 55;
@@ -57,5 +56,4 @@ export default class Tablero {
                 this._pocision++
                 break;
         }
-    }
-}*/
+    }*/

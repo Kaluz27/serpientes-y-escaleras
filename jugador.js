@@ -1,4 +1,4 @@
-//import Dado from "./dado";
+import Dado from "./dado.js";
 
 export default class Jugador {
     constructor(nombre) {
@@ -14,6 +14,8 @@ export default class Jugador {
     }
 
     _turno() {
+        let dado = new Dado;
+        this._pocision += dado._lanzar();
         while (this._pocision <= 100) {
             //let lanzarDado = new Dado();
             //Esto es para que el jugador avanse;
@@ -38,45 +40,81 @@ export default class Jugador {
                     this._pocision++;
                     break;
             }
-//EScaleras
-        switch (this._pocision) {
-            case 45:
-                this._pocision += 5;
-                break;
-            case 35:
-                this._pocision += 15;
-                break;
-            case 78:
-                this._pocision += 8;
-                break
-            case 5:
-                this._pocision += 6;
-                break;
-            default:
-                this._pocision++
-                break;
-        }
-//Serpientes
-        switch (this._posicion) {
-            case 20:
-                this._pocision -= 18;
-                break;
-            case 48:
-                this._pocision -= 12
-                break
-            case 78:
-                this._pocision -= 25;
-                break;
-            case 97:
-                this._pocision -= 50;
-                break;
-            default:
-                this._pocision++
-                break;
-        }
-        }
+            //EScaleras
+            switch (this._pocision) {
+                case 2:
+                    this._pocision += 11;
+                    break;
+                case 15:
+                    this._pocision += 5;
+                    break;
+                case 25:
+                    this._pocision += 5;
+                    break;
+                case 44:
+                    this._pocision += 5;
+                    break;
+                case 46:
+                    this._pocision += 5;
+                    break;
+                case 35:
+                    this._pocision += 15;
+                    break;
+                case 28:
+                    this._pocision += 8;
+                    break
+                case 5:
+                    this._pocision += 6;
+                    break;
+                default:
+                    this._pocision++
+                    break;
+            }
+            //Serpientes
+            switch (this._posicion) {
+                case 20:
+                    this._pocision -= 17;
+                    break;
+                case 48:
+                    this._pocision -= 12
+                    break
+                case 75:
+                    this._pocision -= 25;
+                    break;
+                case 97:
+                    this._pocision -= 50;
+                    break;
 
-        return this._pocision
+                case 38:
+                    this._pocision -= 2;
+                    break;
+
+                case 55:
+                    this._pocision -= 6;
+                    break;
+
+                case 67:
+                    this._pocision -= 7;
+                    break;
+                default:
+                    this._pocision++
+                    break;
+
+                            }
+                        }
+
+
+   return this._pocision
     }
 
+   /* _cayoSerpiente(cantidad) {
+        this._pocision -= cantidad;
+    }
+
+    _cayoEscalera(cantidad) {
+        this._pocision += cantidad;
+    }
+*/
 }
+//PRIMER INTENTO FALLIDO SOLO DEVOLVIA EL MISMO GANADAOR PERO NO ENTRABAN LAS CONDICIONES DE LA SERPIENTE Y ESCALERA
+
